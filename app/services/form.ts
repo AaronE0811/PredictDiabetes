@@ -4,7 +4,7 @@ interface FormData {
   Insulin: number;
   BMI: number;
 }
-const api_url = "http://localhost:5000/api/predict";
+const api_url = "/api/predict";
 
 export const predictDiabetes = async ({
   datosForm,
