@@ -10,6 +10,7 @@ class MLService:
         self.model_path = os.path.join(
     CURRENT_DIR,
     '..',
+    'api',
     'modeloEntrenado',
     'modeloEntrenado.joblib'
 )
