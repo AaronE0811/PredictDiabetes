@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Registramos el blueprint
-app.register_blueprint(api, url_prefix="/")  
+app.register_blueprint(api, url_prefix="/api")  
 
 
 @app.route('/')
