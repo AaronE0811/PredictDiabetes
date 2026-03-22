@@ -6,7 +6,8 @@ import numpy as np
 class MLService:
     def __init__(self):
 
-        self.model_path=os.path.join("./src/modeloEntrenado/modeloEntrenado.joblib")
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.model_path = os.path.join(BASE_DIR, 'modeloEntrenado', 'modeloEntrenado.joblib')
 
         try:
             self.model=joblib.load(self.model_path)

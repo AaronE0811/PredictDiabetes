@@ -1,4 +1,5 @@
 interface FormData {
+  Pregnancies: number;
   Glucose: number;
   Age: number;
   Insulin: number;

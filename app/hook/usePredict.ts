@@ -2,6 +2,7 @@ import { useState } from "react";
 import { predictDiabetes } from "../services/form";
 
 interface FormData {
+  Pregnancies: number;
   Glucose: number;
   Age: number;
   Insulin: number;

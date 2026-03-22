@@ -105,7 +105,7 @@ function Datos() {
               id="Pregnancies"
               value={formData.Pregnancies}
               onChange={handleChange}
-              placeholder="100"
+              placeholder="2"
               required
               className="w-full border rounded p-2"
               min="0"
