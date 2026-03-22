@@ -7,6 +7,8 @@ import { LuSyringe } from "react-icons/lu";
 import { LuTriangleAlert } from "react-icons/lu";
 import { usePredict } from "../hook/usePredict";
 import { MdInfoOutline } from "react-icons/md";
+import { MdPregnantWoman } from "react-icons/md";
+
 function Datos() {
   const { Prediction, loading, result, error, confidence } = usePredict();
   const [formData, setFormData] = useState({
@@ -92,7 +94,7 @@ function Datos() {
           {/* Card: pregnancy */}
           <div className="w-full shadow-xl md:w-[40%] lg:w-[40%] border rounded p-2 flex flex-col">
             <h2 className="flex gap-2 items-center text-xl font-semibold mb-2">
-              <MdOutlineWaterDrop className="text-blue-500" /> Pregnancies
+              <MdPregnantWoman className="text-blue-500" /> Pregnancies
             </h2>
             <label className="text-sm text-slate-600 mb-1" htmlFor="Glucose">
               Pregnancies
