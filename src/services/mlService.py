@@ -6,8 +6,18 @@ import numpy as np
 class MLService:
     def __init__(self):
 
-        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        
+        
         self.model_path = os.path.join(BASE_DIR, 'modeloEntrenado', 'modeloEntrenado.joblib')
+        
+        print(f"DEBUG: Buscando modelo en: {self.model_path}")
+        
+        if os.path.exists(self.model_path):
+            self.model = joblib.load(self.model_path)
+        else:
+            print("ERROR: No se encontró el archivo del modelo.")
+            self.model = None
 
         try:
             self.model=joblib.load(self.model_path)
