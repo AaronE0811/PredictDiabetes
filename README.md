@@ -27,3 +27,6 @@ El modelo se entrenó utilizando el dataset de **Pima Indians Diabetes**. Durant
 - **Tailwind CSS**: Diseño responsivo y moderno.
 - **TypeScript**: Robustez en el manejo de datos del formulario.
 
+url live: https://predict-diabetes-delta.vercel.app/
+
+url backEnd: https://github.com/AaronE0811/backend-PredictDiabetes
