@@ -5,7 +5,7 @@ interface FormData {
   Insulin: number;
   BMI: number;
 }
-const api_url = "https://predict-diabetes-phi.vercel.app/predict";
+const api_url = "https://predict-diabetes-phi.vercel.app/api/predict";
 
 export const predictDiabetes = async ({
   datosForm,
