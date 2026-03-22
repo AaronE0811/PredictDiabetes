@@ -5,30 +5,21 @@ import numpy as np
 class MLService:
     def __init__(self):
 
-        CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-        self.model_path = os.path.join(
-    CURRENT_DIR,
-    '..',
-    'api',
-    'modeloEntrenado',
-    'modeloEntrenado.joblib'
-)
-
-        self.model_path = os.path.abspath(self.model_path)
-
-        print("DEBUG ruta modelo:", self.model_path)
-
+        base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        
+        self.model_path = os.path.join(base_path, 'api', 'modeloEntrenado', 'modeloEntrenado.joblib')
+        
+        print(f"Buscando modelo en: {self.model_path}")
         
         if os.path.exists(self.model_path):
             try:
-                self.model = joblib.load(self.model_path)
-                print("✅ Modelo cargado correctamente")
+                self.model = joblib.load(self.model_path, mmap_mode=None)
+                print("✅ Modelo cargado con éxito")
             except Exception as e:
-                print(f"❌ Error al cargar el modelo: {e}")
+                print(f"❌ Error al cargar modelo: {e}")
                 self.model = None
         else:
-            print("❌ Modelo no encontrado")
+            print(f"❌ El archivo no existe en la ruta: {self.model_path}")
             self.model = None
 
     def predict(self, data):
